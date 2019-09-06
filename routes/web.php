@@ -29,3 +29,7 @@ Route::get('/soma/{n1}/{n2}', function ($n1, $n2) {
 });
 
 Route::post('/mensagem', 'TesteController@escreveMensagem');
+
+Route::get('/posts', 'PostController@index');
+Route::get('/posts/create', 'PostController@create');
+Route::post('/posts', 'PostController@store');
