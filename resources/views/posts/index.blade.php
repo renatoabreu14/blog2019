@@ -21,7 +21,10 @@
             <tr>
                 <td>{{$post->titulo}}</td>
                 <td>{{$post->descricao}}</td>
-                <td></td>
+                <td>
+                    <a href="/posts/{{$post->id}}" class="btn btn-primary">
+                        Mostrar</a>
+                </td>
             </tr>
         @endforeach
         </tbody>
