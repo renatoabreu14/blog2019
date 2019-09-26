@@ -22,8 +22,13 @@
                 <td>{{$post->titulo}}</td>
                 <td>{{$post->descricao}}</td>
                 <td>
-                    <a href="/posts/{{$post->id}}" class="btn btn-primary">
-                        Mostrar</a>
+                    <a href="/posts/{{$post->id}}" class="btn btn-primary">Mostrar</a>
+                    <form action="/posts/{{$post->id}}" method="post" style="display: inline">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">Excluir</button>
+                    </form>
+                    <a href="/posts/{{$post->id}}/edit" class="btn btn-success">Editar</a>
                 </td>
             </tr>
         @endforeach

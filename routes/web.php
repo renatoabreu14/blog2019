@@ -30,7 +30,12 @@ Route::get('/soma/{n1}/{n2}', function ($n1, $n2) {
 
 Route::post('/mensagem', 'TesteController@escreveMensagem');
 
-Route::get('/posts', 'PostController@index');
+Route::resource('/posts', 'PostController');
+Route::resource('/comments', 'CommentController');
+/*Route::get('/posts', 'PostController@index')->name('posts.index');
 Route::get('/posts/create', 'PostController@create');
 Route::post('/posts', 'PostController@store');
 Route::get('/posts/{id}', 'PostController@show');
+Route::delete('/posts/{id}', 'PostController@destroy');
+Route::get('/posts/{id}/edit', 'PostController@edit');
+Route::put('/posts/{id}', 'PostController@update');*/

@@ -9,4 +9,8 @@
         <h2>Descrição:</h2>
         {{$post->descricao}}
     </div>
+
+    @include('comments.create')
+
+    @include('comments.show')
 @endsection
